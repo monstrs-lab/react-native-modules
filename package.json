@@ -1,0 +1,21 @@
+{
+  "name": "react-native-modules",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@monstrs/tools-runtime": "^0.2.19",
+    "@types/node": "^20.3.1",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.0.2",
+  "tools": {
+    "schematic": {
+      "collection": "@monstrs/schematics",
+      "schematic": "project",
+      "type": "libraries",
+      "migration": "1643130757669"
+    }
+  }
+}
