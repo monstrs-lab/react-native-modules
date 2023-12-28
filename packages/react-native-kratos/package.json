@@ -16,18 +16,18 @@
   },
   "devDependencies": {
     "@react-native-async-storage/async-storage": "^1.21.0",
-    "@types/react": "^18.2.13",
-    "@types/react-dom": "^18.2.6",
-    "expo-auth-session": "^5.2.0",
-    "expo-secure-store": "^12.5.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "expo-auth-session": "^5.4.0",
+    "expo-secure-store": "^12.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "^0.73.1"
   },
   "peerDependencies": {
-    "@react-native-async-storage/async-storage": "^1.21.0",
-    "expo-auth-session": "^5.2.0",
-    "expo-secure-store": "^12.5.0",
+    "@react-native-async-storage/async-storage": "^1",
+    "expo-auth-session": "^5",
+    "expo-secure-store": "^12",
     "react": "^18.0.0",
     "react-native": "^0.73.0"
   },
