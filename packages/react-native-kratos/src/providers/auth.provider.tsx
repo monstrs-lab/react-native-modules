@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+
 import type { Session }      from '@monstrs/react-kratos'
 import type { ReactElement } from 'react'
 import type { ReactNode }    from 'react'
@@ -7,7 +9,7 @@ import AsyncStore            from '@react-native-async-storage/async-storage'
 import * as SecureStore      from 'expo-secure-store'
 import { Platform }          from 'react-native'
 import { createContext }     from 'react'
-import { useMemo }           from 'react'
+import { useCallback }       from 'react'
 import { useEffect }         from 'react'
 import { useState }          from 'react'
 import React                 from 'react'
@@ -25,13 +27,12 @@ export interface ContextAuth {
   session?: Session
   sessionToken?: string
   isAuthenticated: boolean
-  setSession: (session: SessionContext) => void
+  setSession: (session: SessionContext) => Promise<void>
 }
 
 export const AuthContext = createContext<ContextAuth>({
   isAuthenticated: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setSession: () => {},
+  setSession: async () => Promise.resolve(),
 })
 
 interface AuthProviderProps {
@@ -43,20 +44,17 @@ export const AuthProvider = ({ children }: AuthProviderProps): ReactElement | nu
   const [initialized, setInitialized] = useState<boolean>(false)
   const sdk = useSdk()
 
-  const value = useMemo(
-    () => ({
-      session: sessionContext?.session,
-      sessionToken: sessionContext?.sessionToken,
-      isAuthenticated: Boolean(sessionContext?.sessionToken),
-      setSession: async (session: SessionContext): Promise<void> => {
-        if (Platform.OS !== 'web') {
-          await SecureStore.setItemAsync(USER_SESSION_NAME, JSON.stringify(session))
-        } else {
-          await AsyncStore.setItem(USER_SESSION_NAME, JSON.stringify(session))
-        }
-      },
-    }),
-    [sessionContext]
+  const setSession = useCallback(
+    async (session: SessionContext) => {
+      if (Platform.OS !== 'web') {
+        await SecureStore.setItemAsync(USER_SESSION_NAME, JSON.stringify(session))
+      } else {
+        await AsyncStore.setItem(USER_SESSION_NAME, JSON.stringify(session))
+      }
+
+      setSessionContext(session)
+    },
+    [setSessionContext]
   )
 
   useEffect(() => {
@@ -91,5 +89,16 @@ export const AuthProvider = ({ children }: AuthProviderProps): ReactElement | nu
     return null
   }
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider
+      value={{
+        session: sessionContext?.session,
+        sessionToken: sessionContext?.sessionToken,
+        isAuthenticated: Boolean(sessionContext?.sessionToken),
+        setSession,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  )
 }
