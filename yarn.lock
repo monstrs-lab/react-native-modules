@@ -1764,15 +1764,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monstrs/react-kratos@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@monstrs/react-kratos@npm:0.0.3"
+"@monstrs/react-kratos@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@monstrs/react-kratos@npm:0.0.4"
   dependencies:
     "@ory/client": "npm:^1.4.7"
     axios: "npm:^1.6.3"
   peerDependencies:
     react: ^18.0.0
-  checksum: 55f51ceafd3f8975db39040425cd537878ffb7804ef295d8cd36b9c230228d5b2e53eb692bce131f9a02f75d38ae9c57aeba9dcb1c2f0ab5e041b3df72708af6
+  checksum: 1ac6428b41f080197f42884fd7db4cded240ab62755bea0df980fbd320291cacb2074bc58184e1b9245d7b0c52237d1ae8291d395a908d3c03a5d2a55f957b7c
   languageName: node
   linkType: hard
 
@@ -1780,7 +1780,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/react-native-kratos@workspace:packages/react-native-kratos"
   dependencies:
-    "@monstrs/react-kratos": "npm:^0.0.3"
+    "@monstrs/react-kratos": "npm:^0.0.4"
     "@react-native-async-storage/async-storage": "npm:^1.21.0"
     "@types/react": "npm:^18.2.45"
     "@types/react-dom": "npm:^18.2.18"
