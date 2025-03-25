@@ -3579,17 +3579,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@monstrs/react-kratos", [\
-      ["npm:0.0.4", {\
-        "packageLocation": "../.yarn/berry/cache/@monstrs-react-kratos-npm-0.0.4-f7816a9558-10c0.zip/node_modules/@monstrs/react-kratos/",\
+      ["npm:0.0.5", {\
+        "packageLocation": "../.yarn/berry/cache/@monstrs-react-kratos-npm-0.0.5-6b59fe65b6-10c0.zip/node_modules/@monstrs/react-kratos/",\
         "packageDependencies": [\
-          ["@monstrs/react-kratos", "npm:0.0.4"]\
+          ["@monstrs/react-kratos", "npm:0.0.5"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/@monstrs-react-kratos-virtual-cdcb10b7e3/2/.yarn/berry/cache/@monstrs-react-kratos-npm-0.0.4-f7816a9558-10c0.zip/node_modules/@monstrs/react-kratos/",\
+      ["virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/@monstrs-react-kratos-virtual-088e79250f/2/.yarn/berry/cache/@monstrs-react-kratos-npm-0.0.5-6b59fe65b6-10c0.zip/node_modules/@monstrs/react-kratos/",\
         "packageDependencies": [\
-          ["@monstrs/react-kratos", "virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.4"],\
+          ["@monstrs/react-kratos", "virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.5"],\
           ["@ory/client", "npm:1.4.7"],\
           ["@types/react", "npm:18.2.45"],\
           ["axios", "npm:1.6.3"],\
@@ -3607,7 +3607,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/react-native-kratos/",\
         "packageDependencies": [\
           ["@monstrs/react-native-kratos", "workspace:packages/react-native-kratos"],\
-          ["@monstrs/react-kratos", "virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.4"],\
+          ["@monstrs/react-kratos", "virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:0.0.5"],\
           ["@react-native-async-storage/async-storage", "virtual:ab10c2c06244154feffa4dc64843321aafe013cfa5b863759f56d67752243603fdfe391471a4252a0ab46a9fe2e133d14b6a25f00db08ca27966ba84988d376d#npm:1.21.0"],\
           ["@types/react", "npm:18.2.45"],\
           ["@types/react-dom", "npm:18.2.18"],\
